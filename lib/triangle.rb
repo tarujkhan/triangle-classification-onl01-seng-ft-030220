@@ -1,3 +1,4 @@
+require 'pry'
 class Triangle
   # write code here
   def initialize(side_1, side_2, side_3)
@@ -12,34 +13,35 @@ def valid?
   sum_one_three = @triangles_side[0] + @triangles_side[2]
   sum_two_three = @triangles_side[1] + @triangles_side[2]
   
-  if (@triangles_side.none? |side| side <= 0) &&
+  if (@triangles_side.none? {|side| side <= 0}) &&
     (sum_one_two > @triangles_side[2]) && (sum_one_three > @triangles_side[1]) && (sum_two_three > @triangles_side[0])
     return true 
   else 
     return false 
   end 
-  
+end 
+
   def kind 
    if valid? 
     if @triangles_side.uniq.length == 1 
-      return 
-      :equilateral
-    elseif 
+      return :equilateral
+    elsif 
       @triangles_side.uniq.length == 2 
-      return 
-      :isosceles
+      return :isosceles
     else 
-      return 
-      :scalene
+      return :scalene
     end 
+  else 
+    raise TriangleError
   end 
-    begin 
-    raise TriangleError 
-    rescue TriangleError => error 
-    puts error.message
-  end 
+  #   begin 
+  #   binding.pry
+  #   raise TriangleError 
+  #   rescue TriangleError => error 
+  #   puts error.message
+  # end 
 end 
-end 
+
 
 class TriangleError < StandardError 
 end 

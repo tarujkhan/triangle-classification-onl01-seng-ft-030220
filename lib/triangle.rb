@@ -23,9 +23,8 @@ end
   def kind 
    if valid? 
     if @triangles_side.uniq.length == 1 
-      return 
-      :equilateral
-    elseif 
+      return :equilateral
+    elsif 
       @triangles_side.uniq.length == 2 
       return 
       :isosceles

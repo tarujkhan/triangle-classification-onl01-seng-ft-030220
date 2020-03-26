@@ -31,8 +31,10 @@ end
       return :scalene
     end 
   else 
+    raise TriangleError
   end 
     begin 
+    binding.pry
     raise TriangleError 
     rescue TriangleError => error 
     puts error.message

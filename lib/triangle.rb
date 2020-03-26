@@ -18,7 +18,8 @@ def valid?
   else 
     return false 
   end 
-  
+end 
+
   def kind 
    if valid? 
     if @triangles_side.uniq.length == 1 

@@ -30,6 +30,7 @@ end
     else 
       return :scalene
     end 
+  else 
   end 
     begin 
     raise TriangleError 

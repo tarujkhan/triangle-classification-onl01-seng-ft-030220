@@ -40,7 +40,7 @@ end
     puts error.message
   end 
 end 
-end 
+
 
 class TriangleError < StandardError 
 end 

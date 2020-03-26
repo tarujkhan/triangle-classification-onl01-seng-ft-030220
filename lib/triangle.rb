@@ -12,7 +12,7 @@ def valid?
   sum_one_three = @triangles_side[0] + @triangles_side[2]
   sum_two_three = @triangles_side[1] + @triangles_side[2]
   
-  if (@triangles_side.none? |side| side <= 0) &&
+  if (@triangles_side.none? {|side| side <= 0}) &&
     (sum_one_two > @triangles_side[2]) && (sum_one_three > @triangles_side[1]) && (sum_two_three > @triangles_side[0])
     return true 
   else 

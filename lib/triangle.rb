@@ -26,11 +26,9 @@ end
       return :equilateral
     elsif 
       @triangles_side.uniq.length == 2 
-      return 
-      :isosceles
+      return :isosceles
     else 
-      return 
-      :scalene
+      return :scalene
     end 
   end 
     begin 

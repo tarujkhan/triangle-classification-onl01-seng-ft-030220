@@ -34,12 +34,12 @@ end
   else 
     raise TriangleError
   end 
-    begin 
-    binding.pry
-    raise TriangleError 
-    rescue TriangleError => error 
-    puts error.message
-  end 
+  #   begin 
+  #   binding.pry
+  #   raise TriangleError 
+  #   rescue TriangleError => error 
+  #   puts error.message
+  # end 
 end 
 
 
